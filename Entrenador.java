@@ -1,7 +1,10 @@
+import java.util.List;
+
 public class Entrenador {
     private String nombreEntrenador; 
     private String apellido; 
     private int edad;
+    private int puntosGanados;
 
     public Entrenador (String nombreEntrenador, String apellido, int edad){
         this.nombreEntrenador = nombreEntrenador;
@@ -18,6 +21,14 @@ public class Entrenador {
    
     public String getNombreCompleto(){
         return "Entrenador registrado: " + nombreEntrenador + apellido; 
+    }
+     public int getPuntos() {
+        return puntosGanados;
+    }
+
+
+    public void sumarPuntos(int puntosGanados) {
+        this.puntosGanados += puntosGanados;
     }
 
 }

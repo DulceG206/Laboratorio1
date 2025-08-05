@@ -14,4 +14,15 @@ public class Habilidad {
     public String getEfecto(){
         return "Hará al oponente: " + efecto;
     }
+    public int getModificadorAtaque() {
+        if (efecto.toLowerCase().contains("llama")) return 15;
+        if (efecto.toLowerCase().contains("escudo")) return 0;
+        if (efecto.toLowerCase().contains("impacto")) return 0;
+        return 0;
+    }
+
+    public int getModificadorEnemigo() {
+        if (efecto.toLowerCase().contains("impacto")) return -10;
+        return 0;
+    }
 }
